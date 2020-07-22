@@ -16,15 +16,10 @@ let puzzle = [[ 8,9,5,   7,4,2,   1,3,6 ],
               [ 3,2,8,   1,9,6,   5,4,7 ]];
 
 
+console.log(val.getRow(puzzle, 8));
+console.log(val.getRow(puzzle, 0));
+console.log(val.getColumn(puzzle, 0));
+console.log(val.getColumn(puzzle, 8));
+console.log(val.getSection(puzzle, 0 , 0));
+console.log(val.getSection(puzzle, 1, 0));
 
-let getRow = val.getRow(puzzle, 8);
-console.log(getRow);
-
-let getColumn = val.getColumn(puzzle, 0);
-console.log(getColumn);
-
-let getSection = val.getSection(puzzle, 0, 0);
-console.log(getSection);
-
-let getSection2 = val.getSection(puzzle, 1, 1);
-console.log(getSection2);
