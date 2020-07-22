@@ -1,0 +1,19 @@
+{
+  "name": "sudoko",
+  "version": "1.0.0",
+  "description": "Sudoku project ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BalajiJBcs/sudoku.git"
+  },
+  "author": "Balaji Jothi Balaiyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BalajiJBcs/sudoku/issues"
+  },
+  "homepage": "https://github.com/BalajiJBcs/sudoku#readme"
+}
