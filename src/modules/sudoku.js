@@ -42,4 +42,53 @@ function getSection(puzzle, x, y) {
    return result;
 }
 
-module.exports = { getRow, getColumn, getSection };
+
+/**
+* Returns validation of the puzzle
+*
+* @param { Array } matriz input [row][column]
+*/
+function includes1to9(numArr) {
+    for(let i = 1; i<= numArr.length; i++) {
+        if(numArr.includes(i) == false) {
+            return false;
+        }
+    }
+    return true;
+}
+
+/**
+ * Returns validation of the puzzle
+ *
+ * @param { Array } matriz input [row][column]
+ */
+function sudokuIsValid(puzzle) {
+    for(let i =0; i < puzzle.length; i++) {
+        if(includes1to9(puzzle[i]) == false) {
+            return false;
+        }
+    }
+    return true;
+}
+
+/**
+ * Return the compare of two arrays
+ *
+ * param { Array } matriz input [row][column]
+ */
+function isSame(sudoku1, sudoku2) {
+    for(let i =0; i < sudoku1.length; i++) {
+        let a = sudoku1[i];
+        let b = sudoku2[i];
+        let value =Array.isArray(a) &&
+            Array.isArray(b) &&
+            a.length === b.length &&
+            a.every((val, index) => val === b[index]);
+        if(value == false) {
+            return false;
+        }
+    }
+    return true;
+}
+
+module.exports = { getRow, getColumn, getSection, includes1to9, sudokuIsValid, isSame };
